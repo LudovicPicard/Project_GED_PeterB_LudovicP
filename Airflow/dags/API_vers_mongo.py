@@ -88,7 +88,7 @@ default_args = {
 
 # Définir le DAG
 dag = DAG(
-    'data_processing_dag',
+    'Economix_vers_mongo_dag',
     default_args=default_args,
     description='Traitement des données et insertion dans MongoDB',
     schedule_interval='0 */8 * * *',  # Exécution toutes les 8 heures
