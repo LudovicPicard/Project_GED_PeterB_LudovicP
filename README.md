@@ -89,7 +89,38 @@ Les données indexées dans **Elasticsearch** peuvent être explorées et visual
 ![Schéma_Architecture](https://github.com/user-attachments/assets/863242c5-f25a-428f-a538-487527795f72)
 
 ---
+## Déroulement Technique du Projet
 
+Étapes d'installation :
+1. Cloner le dépôt :
+
+```bash
+git clone https://github.com/LudovicPicard/Project_GED_PeterB_LudovicP.git
+```
+2. Créer un environnement virtuel :
+
+```bash
+python -m venv venv
+source venv/bin/activate  # Unix
+# Ou
+venv\Scripts\activate     # Windows
+```
+3. Installer les dépendances :
+
+```bash
+pip install -r requirements.txt
+```
+Configurer les variables d'environnement : Créez un fichier .env et renseignez les informations de connexion MongoDB, le lien de l'api et Elasticsearch :
+
+```bash
+MONGO_USERNAME="******"
+MONGO_PASSWORD="******"
+MONGO_DBNAME="*******"
+MONGO_URI="*********"
+API_URL=https://hubeau.eaufrance.fr/api/v1/prelevements/referentiel/ouvrages?
+API_URL2=https://odre.opendatasoft.com/api/explore/v2.1/catalog/datasets/eco2mix-regional-tr/records
+```
+---
 ## Déploiement avec Docker
 
 Le projet utilise **Docker Compose** pour déployer l'ensemble des services dans des conteneurs Docker. Cela inclut :
