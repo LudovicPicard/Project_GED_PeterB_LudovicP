@@ -20,7 +20,7 @@ class Eco2mixAPIClient:
     def __init__(self, api_url):
         self.api_url = api_url
 
-    def fetch_data(self, limit=20, region="Bretagne"):
+    def fetch_data(self, limit=50, region="Bretagne"):
         try:
             print(f"Récupération des données eco2mix pour la région {region} avec une limite de {limit}")
             params = {'limit': limit, 'refine': f"libelle_region:{region}"}
@@ -56,7 +56,7 @@ class HubeauAPIClient:
     def __init__(self, api_url):
         self.api_url = api_url
 
-    def fetch_data(self, codes_insee, size=20):
+    def fetch_data(self, codes_insee, size=50):
         try:
             print(f"Récupération des données Hubeau pour les communes INSEE : {codes_insee}")
             params = {

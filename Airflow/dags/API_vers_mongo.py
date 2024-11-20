@@ -6,6 +6,7 @@ import pandas as pd
 import os
 from dotenv import load_dotenv
 from pymongo import MongoClient
+from elasticsearch import Elasticsearch
 
 # Charger les variables d'environnement
 load_dotenv()
@@ -46,7 +47,7 @@ class HubeauAPIClient:
     def __init__(self, api_url):
         self.api_url = api_url
 
-    def fetch_data(self, codes_insee, size=200):
+    def fetch_data(self, codes_insee, size=50):
         print(f"Étape : Récupération des données Hubeau pour les communes INSEE : {codes_insee}")
         try:
             params = {
