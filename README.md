@@ -86,6 +86,7 @@ Les données indexées dans **Elasticsearch** peuvent être explorées et visual
 ├── requirements.txt                  # Dépendances Python du projet
 ├── .env                              # Variables d'environnement (API, MongoDB, Elasticsearch)
 ```
+![Schéma_Architecture](https://github.com/user-attachments/assets/863242c5-f25a-428f-a538-487527795f72)
 
 ---
 
