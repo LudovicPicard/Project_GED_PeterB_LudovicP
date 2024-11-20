@@ -22,7 +22,7 @@
 
 ## Objectif du Projet
 
-Le projet a pour but de construire un **pipeline de données automatisé** qui récupère, transforme et charge des données provenant de deux APIs externes (**Économix** et **Hubeau**) dans une base de données **MongoDB**. Ce pipeline permet d'automatiser la collecte et l'intégration des données en temps réel et consolidées.
+Le projet a pour but de construire un **pipeline de données automatisé** qui récupère, transforme et charge des données provenant de deux APIs externes (**écomix** et **Hubeau**) dans une base de données **MongoDB**. Ce pipeline permet d'automatiser la collecte et l'intégration des données en temps réel et consolidées.
 
 Les principaux objectifs sont :
 - **Automatisation des collectes de données** : Extraction de données provenant d'APIs avec une fréquence définie (par exemple, horaire ou quotidienne) pour garantir la fraîcheur des informations.
@@ -31,7 +31,7 @@ Les principaux objectifs sont :
 
 ## APIs Utilisées
 
-### 1. **API Économix (éCO2mix)**
+### 1. **API écomix (éCO2mix)**
    - **Objectif** : Fournir des données régionales "temps réel" sur la consommation et la production d'énergie en France, issues de l'application éCO2mix. Ce jeu de données est mis à jour toutes les heures et permet de suivre les mesures des télémesures des ouvrages, complétées par des forfaits et estimations.
    - **Données extraites** :
      - **Consommation réalisée** à l'échelle régionale.
@@ -108,10 +108,10 @@ Avant de commencer, assurez-vous d'avoir installé les éléments suivants :
 
 ## Développement et Configuration des DAGs
 
-Le fichier `economix_hubeau_to_mongo.py` définit le pipeline **Airflow** qui récupère les données des APIs **Économix** et **Hubeau**, les transforme et les insère dans **MongoDB**. Ce pipeline sera exécuté à intervalles réguliers, par exemple toutes les heures, pour assurer que les données restent fraîches.
+Le fichier `economix_hubeau_to_mongo.py` définit le pipeline **Airflow** qui récupère les données des APIs **écomix** et **Hubeau**, les transforme et les insère dans **MongoDB**. Ce pipeline sera exécuté à intervalles réguliers, par exemple toutes les heures, pour assurer que les données restent fraîches.
 
 Les tâches du pipeline incluent :
-- **Extraction des données** depuis les APIs **Économix** (éCO2mix) et **Hubeau**.
+- **Extraction des données** depuis les APIs **écomix** (éCO2mix) et **Hubeau**.
 - **Transformation des données** : Nettoyage et prétraitement des données extraites.
 - **Chargement des données** dans **MongoDB**.
 
@@ -119,7 +119,7 @@ Les tâches du pipeline incluent :
 
 ### Collecte des Données
 Le pipeline collecte des données de deux APIs principales :
-- **Données de consommation et de production d'énergie** via l'API **Économix (éCO2mix)**.
+- **Données de consommation et de production d'énergie** via l'API **écomix (éCO2mix)**.
 - **Données sur les prélèvements en eau** via l'API **Hubeau**.
 
 ### Transformation des Données
@@ -141,6 +141,6 @@ Le projet utilise **Docker Compose** pour déployer l'ensemble des services dans
 
 ## Conclusion
 
-Ce projet permet de centraliser les données provenant de deux APIs : **Économix (éCO2mix)** pour les
+Ce projet permet de centraliser les données provenant de deux APIs : **écomix (éCO2mix)** pour les
 
  données de consommation et production d'énergie, et **Hubeau** pour les données sur les prélèvements en eau. Grâce à **Apache Airflow**, le pipeline de données est orchestré et automatisé, garantissant la collecte et l'insertion des données à intervalles réguliers dans **MongoDB**. Ce projet est conçu pour être extensible, permettant d'ajouter facilement de nouvelles sources de données et d'analyses au fur et à mesure des besoins.
