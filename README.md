@@ -23,6 +23,8 @@
 - **Airflow Web UI** - Pour superviser et visualiser l'exécution des pipelines.
 - **Kibana** - Pour créer des dashboards interactifs à partir des données indexées dans Elasticsearch.
 
+---
+
 ## Objectif du Projet
 
 Le projet a pour but de construire un **pipeline de données automatisé** qui récupère, transforme et charge des données provenant de deux APIs externes (**écomix** et **Hubeau**) dans une base de données **MongoDB**. Ces données sont ensuite exportées vers **Elasticsearch** pour permettre des analyses avancées et des visualisations interactives via **Kibana**.
@@ -58,6 +60,16 @@ Les données indexées dans **Elasticsearch** peuvent être explorées et visual
 - Créer des dashboards interactifs.
 - Suivre des tendances sur les volumes de consommation énergétique ou les prélèvements en eau.
 - Effectuer des analyses comparatives et générer des rapports.
+
+---
+
+## Difficultés Rencontrées
+
+- Découverte et prise en Main d'Apache Airflow
+- Liaison entre MongoDB et Airflow
+- Extraction depuis MongoDB et création des index dans Elasticsearch
+- Recherche d'APIs gratuites et fonctionnelles
+- Intégration de tous les composants et logiciels
 
 ---
 
@@ -99,4 +111,4 @@ Accédez ensuite à :
 
 ## Conclusion
 
-Ce projet propose un pipeline robuste qui automatise la collecte, la transformation et le stockage des données dans **MongoDB**, tout en rendant ces données accessibles pour des analyses avancées via **Elasticsearch** et **Kibana**. Grâce à cette architecture, il est possible d'explorer des données complexes à travers des visualisations interactives et d'étendre facilement le pipeline pour intégrer de nouvelles sources de données.
+Ce projet propose un pipeline robuste qui automatise la collecte, la transformation et le stockage des données dans **MongoDB**, tout en rendant ces données accessibles pour des analyses avancées via **Elasticsearch** et **Kibana**. Malgré les défis rencontrés, tels que la configuration des connexions et la gestion des technologies, ces difficultés ont permis d'acquérir une expertise sur l'intégration de systèmes complexes et l'orchestration de pipelines de données.
